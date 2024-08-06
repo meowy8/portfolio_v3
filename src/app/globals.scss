@@ -1,0 +1,43 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(hsl(300, 68%, 6%), hsl(300, 68%, 8%));
+
+    a {
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    p,
+    span {
+      color: rgb(207, 207, 207);
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2 {
+      font-family: "Sora";
+    }
+
+    p,
+    span {
+      font-family: "Quicksand";
+    }
+  }
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("/fonts/Sora/Sora-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}

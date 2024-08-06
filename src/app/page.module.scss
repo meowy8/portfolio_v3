@@ -1,0 +1,239 @@
+.main {
+  // position: absolute;
+  display: flex;
+  padding: 10px;
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 1350px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 80px;
+  }
+
+  .aboutMe {
+    // margin: 70px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .content {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: min-content;
+
+      // height: 100%;
+
+      @media screen and (max-width: 1350px) {
+        position: relative;
+      }
+      @media screen and (max-width: 1350px) {
+        width: auto;
+      }
+
+      // .header {
+      //   width: 500px;
+      // }
+
+      .titles {
+        margin-bottom: 20px;
+
+        h1 {
+          font-size: 48px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      .socials {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+
+        a {
+          color: rgb(207, 207, 207);
+          font-size: 18px;
+        }
+      }
+    }
+
+    .skillsContainer {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      margin-top: 30px;
+
+      .skills {
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid hsl(294, 97%, 14%);
+        display: flex;
+        // flex-direction: column;
+        gap: 30px;
+
+        @media screen and (max-width: 600px) {
+          flex-direction: column;
+        }
+
+        h1 {
+          margin-bottom: 10px;
+          // margin-left: 10px;
+        }
+
+        .skillsGrid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+
+          @media screen and (max-width: 780px) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          @media screen and (max-width: 600px) {
+            grid-template-columns: repeat(5, 1fr);
+          }
+          @media screen and (max-width: 500px) {
+            grid-template-columns: repeat(4, 1fr);
+          }
+
+          .skill {
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            &:hover .tooltip {
+              opacity: 1;
+              display: flex;
+            }
+
+            svg {
+              width: 50px;
+            }
+
+            .tooltip {
+              display: none;
+              opacity: 0;
+              position: absolute;
+              font-size: 14px;
+              background-color: rgb(131, 6, 145);
+              padding: 5px;
+              border-radius: 5px;
+              top: -30px;
+              min-width: 100%;
+              justify-content: center;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 50%;
+    padding: 20px;
+    margin: 100px 0;
+
+    @media screen and (max-width: 1350px) {
+      width: 90%;
+    }
+
+    a {
+      max-width: 800px;
+    }
+
+    .projectCard {
+      // width: 100%;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+      border: 1px solid transparent;
+      transition: background-color 0.2s ease-out, border 0.2s ease-out,
+        opacity 0.8s ease;
+
+      // @media screen and (max-width: 1350px) {
+      //   width: 100%;
+      // }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+
+        .content .linkIcon {
+          opacity: 1;
+        }
+      }
+      &:active {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .projectImageContainer {
+        width: 250px;
+        height: 100px;
+
+        @media screen and (max-width: 600px) {
+          &,
+          img {
+            display: none;
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border: 1px solid hsl(295, 32%, 22%);
+          border-radius: 5px;
+        }
+      }
+
+      .content {
+        width: 100%;
+        padding: 10px;
+        position: relative;
+
+        h2 {
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 15px;
+        }
+
+        .skills {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-top: 20px;
+
+          .icon {
+            font-size: 10px;
+          }
+        }
+
+        .linkIcon {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          color: white;
+          transition: all 0.2s ease;
+        }
+      }
+    }
+  }
+}

@@ -37,7 +37,6 @@ const ProjectCard = ({
       <div
         className={styles.projectCard}
         style={{
-          ...projectsTransition,
           borderColor: hovered ? `hsl(${hue}, 97%, 14%)` : "transparent",
         }}
         onMouseEnter={() => setHovered(true)}
@@ -50,7 +49,10 @@ const ProjectCard = ({
             height={200}
             alt={name}
             onLoad={triggerProjectTransition}
-            style={{ borderColor: `hsl(${hue}, 32%, 22%)` }}
+            style={{
+              ...projectsTransition,
+              borderColor: `hsl(${hue}, 32%, 22%)`,
+            }}
           />
         </div>
         <div className={styles.content}>

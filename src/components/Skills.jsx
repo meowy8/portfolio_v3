@@ -27,32 +27,32 @@ const Skills = ({ hue }) => {
       <div>
         <h1>Front End</h1>
         <div className={styles.skillsGrid}>
-          <Skill name="JavaScript" icon={<JavaScriptIcon />} />
-          <Skill name="React" icon={<ReactIcon />} />
-          <Skill name="Tailwind" icon={<TailwindIcon />} />
-          <Skill name="CSS" icon={<CSSIcon />} />
-          <Skill name="TypeScript" icon={<TSIcon />} />
-          <Skill name="HTML" icon={<HTMLIcon />} />
-          <Skill name="SASS" icon={<SASSIcon />} />
-          <Skill name="Redux" icon={<ReduxIcon />} />
+          <Skill name="JavaScript" icon={<JavaScriptIcon />} hue={hue} />
+          <Skill name="React" icon={<ReactIcon />} hue={hue} />
+          <Skill name="Tailwind" icon={<TailwindIcon />} hue={hue} />
+          <Skill name="CSS" icon={<CSSIcon />} hue={hue} />
+          <Skill name="TypeScript" icon={<TSIcon />} hue={hue} />
+          <Skill name="HTML" icon={<HTMLIcon />} hue={hue} />
+          <Skill name="SASS" icon={<SASSIcon />} hue={hue} />
+          <Skill name="Redux" icon={<ReduxIcon />} hue={hue} />
         </div>
       </div>
       <div>
         <h1>Back End</h1>
         <div className={styles.skillsGrid}>
-          <Skill name="Node" icon={<NodeIcon />} />
-          <Skill name="MongoDB" icon={<MongoIcon />} />
-          <Skill name="Next.js" icon={<NextIcon />} />
-          <Skill name="Firebase" icon={<FirebaseIcon />} />
+          <Skill name="Node" icon={<NodeIcon />} hue={hue} />
+          <Skill name="MongoDB" icon={<MongoIcon />} hue={hue} />
+          <Skill name="Next.js" icon={<NextIcon />} hue={hue} />
+          <Skill name="Firebase" icon={<FirebaseIcon />} hue={hue} />
         </div>
       </div>
       <div>
         <h1>Tools</h1>
         <div className={styles.skillsGrid}>
-          <Skill name="Figma" icon={<FigmaIcon />} />
-          <Skill name="Git" icon={<GitIcon />} />
-          <Skill name="GraphQL" icon={<GraphQLIcon />} />
-          <Skill name="Shopify" icon={<ShopifyIcon />} />
+          <Skill name="Figma" icon={<FigmaIcon />} hue={hue} />
+          <Skill name="Git" icon={<GitIcon />} hue={hue} />
+          <Skill name="GraphQL" icon={<GraphQLIcon />} hue={hue} />
+          <Skill name="Shopify" icon={<ShopifyIcon />} hue={hue} />
         </div>
       </div>
     </aside>
